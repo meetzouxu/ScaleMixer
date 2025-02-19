@@ -1,6 +1,6 @@
 
 
-# U-Mixer
+# ScaleMixer
 ## Usage
 1. Install Python 3.8. For convenience, execute the following command.
 
