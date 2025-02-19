@@ -1,16 +1,22 @@
 
-## The detailed description of the project will be updated as soon as possible. I've been really busy looking for a job lately. 
-
-## Looking for a post-doctoral position!!!
 
 # U-Mixer
-The code of U-Mixer: An Unet-Mixer Architecture with Stationarity Correction for Time Series Forecasting (AAAI2024): https://github.com/XiangMa-Shaun/U-Mixer
+## Usage
+1. Install Python 3.8. For convenience, execute the following command.
 
-paper: http://arxiv.org/abs/2401.02236
+```bash
+pip install -r requirements.txt
+```
 
-data: https://drive.google.com/drive/folders/13Cg1KYOlzM5C7K8gK8NfC-F3EYxkM3D2?usp=sharing or https://pan.baidu.com/s/1r3KhGd0Q9PJIUZdfEYoymg?pwd=i9iy
+2. Prepare Data. You can obtain the well pre-processed datasets from [[Google Drive]](https://drive.google.com/drive/folders/13Cg1KYOlzM5C7K8gK8NfC-F3EYxkM3D2?usp=sharing) or [[Baidu Drive]](https://pan.baidu.com/s/1r3KhGd0Q9PJIUZdfEYoymg?pwd=i9iy), Then place the downloaded data in the folder`./dataset`.
 
-If you have any questions or suggestions, feel free to contact:
-Xiang Ma (xiangma@mail.sdu.edu.cn)
-Caiming Zhang (czhang@sdu.edu.cn)
+3. Train and evaluate model. We provide the experiment scripts for all benchmarks under the folder `./scripts/`. You can reproduce the experiment results as the following examples:
 
+```bash
+bash ./scripts/long_term_forecast/ETT_script/ScaleMixer_ETTh1.sh 
+```
+4. Develop your own model.
+
+- Add the model file to the folder `./models`. .
+- Include the newly added model in the Exp_Basic.model_dict of `./exp/exp_basic.py`.
+- Create the corresponding scripts under the folder `./scripts`.
